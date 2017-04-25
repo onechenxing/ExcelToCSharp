@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+
+  <!--Csv To Static Table-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        Build Csv Static Table Code
+      </Title>
+      <Shortcut>csv</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>info</ID>
+          <ToolTip>Info Class</ToolTip>
+          <Default>XXInfo</Default>
+        </Literal>
+        <Literal>
+          <ID>note</ID>
+          <ToolTip>Note Name</ToolTip>
+          <Default>xx</Default>
+        </Literal>
+        <Literal>
+          <ID>dic</ID>
+          <ToolTip>Dic Name</ToolTip>
+          <Default>xxDic</Default>
+        </Literal>
+        <Literal>
+          <ID>csv</ID>
+          <ToolTip>Csv Name</ToolTip>
+          <Default>csv</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+        private Dictionary<int, $info$> _$dic$;
+        /// <summary>
+        /// $note$静态数据表
+        /// </summary>
+        public Dictionary<int, $info$> $dic$
+        {
+            get
+            {
+                if (_$dic$ == null)
+                {
+                    _$dic$ = CsvLoad.CsvToDictionary<int, $info$>("$csv$", "id");
+                }
+                return _$dic$;
+            }
+        }
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+</CodeSnippets>

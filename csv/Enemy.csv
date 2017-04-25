@@ -1,0 +1,5 @@
+ID[int],名称,预制体,血量[float],破损装备血量(多个以^分割),移动速度[float],攻击力[float],攻击间隔[float],攻击距离[float],描述
+id,name,prefab,hp,hpBreak,speed,attackValue,attackTimeSpan,attackLength,describe
+1,原始人1,Enemy1,270,,0.5,100,1,1.5,
+2,原始人2,Enemy2,640,300,0.5,100,1,1.5,
+3,原始人3,Enemy3,800,300^500,0.5,150,1,1.5,
